@@ -1,0 +1,717 @@
+{
+ "nodes": [
+  {
+   "id": "N00",
+   "name": "Main Substation",
+   "kind": "substation",
+   "x": 6.0,
+   "y": 4.5
+  },
+  {
+   "id": "N01",
+   "name": "Harbor Heights",
+   "kind": "neighborhood",
+   "x": 6.42,
+   "y": 7.85
+  },
+  {
+   "id": "N02",
+   "name": "Orangewood",
+   "kind": "neighborhood",
+   "x": 9.09,
+   "y": 5.71
+  },
+  {
+   "id": "N03",
+   "name": "Chapman Park",
+   "kind": "neighborhood",
+   "x": 8.84,
+   "y": 0.16
+  },
+  {
+   "id": "N04",
+   "name": "Brea Hills",
+   "kind": "neighborhood",
+   "x": 5.91,
+   "y": 3.8
+  },
+  {
+   "id": "N05",
+   "name": "Sunny Hills",
+   "kind": "neighborhood",
+   "x": 5.91,
+   "y": 3.2
+  },
+  {
+   "id": "N06",
+   "name": "Valencia Mesa",
+   "kind": "neighborhood",
+   "x": 5.66,
+   "y": 5.47
+  },
+  {
+   "id": "N07",
+   "name": "Commonwealth",
+   "kind": "neighborhood",
+   "x": 11.97,
+   "y": 2.03
+  },
+  {
+   "id": "N08",
+   "name": "Malvern",
+   "kind": "neighborhood",
+   "x": 1.82,
+   "y": 4.15
+  },
+  {
+   "id": "N09",
+   "name": "Placentia Flats",
+   "kind": "neighborhood",
+   "x": 2.06,
+   "y": 4.07
+  },
+  {
+   "id": "N10",
+   "name": "Laguna Lake",
+   "kind": "neighborhood",
+   "x": 3.29,
+   "y": 0.95
+  },
+  {
+   "id": "N11",
+   "name": "Rolling Hills",
+   "kind": "neighborhood",
+   "x": 1.28,
+   "y": 0.81
+  },
+  {
+   "id": "N12",
+   "name": "Amerige",
+   "kind": "neighborhood",
+   "x": 3.99,
+   "y": 6.07
+  },
+  {
+   "id": "N13",
+   "name": "Coyote Hills",
+   "kind": "neighborhood",
+   "x": 3.96,
+   "y": 8.05
+  },
+  {
+   "id": "N14",
+   "name": "Raymond Grove",
+   "kind": "neighborhood",
+   "x": 1.79,
+   "y": 2.84
+  },
+  {
+   "id": "N15",
+   "name": "Euclid Row",
+   "kind": "neighborhood",
+   "x": 4.49,
+   "y": 6.26
+  },
+  {
+   "id": "N16",
+   "name": "Woods Ave",
+   "kind": "neighborhood",
+   "x": 3.3,
+   "y": 4.42
+  },
+  {
+   "id": "N17",
+   "name": "Bastanchury",
+   "kind": "neighborhood",
+   "x": 2.94,
+   "y": 4.76
+  }
+ ],
+ "edges": [
+  {
+   "u": "N00",
+   "v": "N04",
+   "minutes": 3,
+   "cost": 48
+  },
+  {
+   "u": "N00",
+   "v": "N06",
+   "minutes": 4,
+   "cost": 59
+  },
+  {
+   "u": "N00",
+   "v": "N05",
+   "minutes": 4,
+   "cost": 66
+  },
+  {
+   "u": "N01",
+   "v": "N13",
+   "minutes": 9,
+   "cost": 150
+  },
+  {
+   "u": "N01",
+   "v": "N06",
+   "minutes": 9,
+   "cost": 149
+  },
+  {
+   "u": "N01",
+   "v": "N15",
+   "minutes": 9,
+   "cost": 132
+  },
+  {
+   "u": "N00",
+   "v": "N02",
+   "minutes": 9,
+   "cost": 153
+  },
+  {
+   "u": "N01",
+   "v": "N02",
+   "minutes": 11,
+   "cost": 163
+  },
+  {
+   "u": "N02",
+   "v": "N06",
+   "minutes": 10,
+   "cost": 228
+  },
+  {
+   "u": "N03",
+   "v": "N07",
+   "minutes": 10,
+   "cost": 240
+  },
+  {
+   "u": "N03",
+   "v": "N05",
+   "minutes": 11,
+   "cost": 214
+  },
+  {
+   "u": "N03",
+   "v": "N04",
+   "minutes": 13,
+   "cost": 267
+  },
+  {
+   "u": "N04",
+   "v": "N05",
+   "minutes": 2,
+   "cost": 42
+  },
+  {
+   "u": "N04",
+   "v": "N06",
+   "minutes": 6,
+   "cost": 110
+  },
+  {
+   "u": "N05",
+   "v": "N06",
+   "minutes": 6,
+   "cost": 152
+  },
+  {
+   "u": "N06",
+   "v": "N15",
+   "minutes": 3,
+   "cost": 73
+  },
+  {
+   "u": "N02",
+   "v": "N07",
+   "minutes": 13,
+   "cost": 325
+  },
+  {
+   "u": "N05",
+   "v": "N07",
+   "minutes": 17,
+   "cost": 304
+  },
+  {
+   "u": "N08",
+   "v": "N09",
+   "minutes": 2,
+   "cost": 13
+  },
+  {
+   "u": "N08",
+   "v": "N17",
+   "minutes": 5,
+   "cost": 89
+  },
+  {
+   "u": "N08",
+   "v": "N14",
+   "minutes": 5,
+   "cost": 69
+  },
+  {
+   "u": "N09",
+   "v": "N17",
+   "minutes": 3,
+   "cost": 75
+  },
+  {
+   "u": "N09",
+   "v": "N14",
+   "minutes": 4,
+   "cost": 68
+  },
+  {
+   "u": "N10",
+   "v": "N11",
+   "minutes": 5,
+   "cost": 129
+  },
+  {
+   "u": "N10",
+   "v": "N14",
+   "minutes": 7,
+   "cost": 152
+  },
+  {
+   "u": "N09",
+   "v": "N10",
+   "minutes": 11,
+   "cost": 167
+  },
+  {
+   "u": "N11",
+   "v": "N14",
+   "minutes": 5,
+   "cost": 127
+  },
+  {
+   "u": "N09",
+   "v": "N11",
+   "minutes": 11,
+   "cost": 183
+  },
+  {
+   "u": "N12",
+   "v": "N15",
+   "minutes": 3,
+   "cost": 22
+  },
+  {
+   "u": "N12",
+   "v": "N17",
+   "minutes": 6,
+   "cost": 87
+  },
+  {
+   "u": "N06",
+   "v": "N12",
+   "minutes": 7,
+   "cost": 122
+  },
+  {
+   "u": "N13",
+   "v": "N15",
+   "minutes": 5,
+   "cost": 97
+  },
+  {
+   "u": "N12",
+   "v": "N13",
+   "minutes": 6,
+   "cost": 93
+  },
+  {
+   "u": "N16",
+   "v": "N17",
+   "minutes": 2,
+   "cost": 21
+  },
+  {
+   "u": "N09",
+   "v": "N16",
+   "minutes": 3,
+   "cost": 83
+  },
+  {
+   "u": "N08",
+   "v": "N16",
+   "minutes": 5,
+   "cost": 82
+  }
+ ],
+ "root": "N00",
+ "records": [
+  {
+   "outage_id": "OUT-1001",
+   "meter_id": "MTR-21003",
+   "node": "N15",
+   "site_type": "Business",
+   "priority_rank": 4,
+   "customers": 48,
+   "repair_hours": 3,
+   "reported": "19:23"
+  },
+  {
+   "outage_id": "OUT-1002",
+   "meter_id": "MTR-88463",
+   "node": "N02",
+   "site_type": "School",
+   "priority_rank": 3,
+   "customers": 1,
+   "repair_hours": 4,
+   "reported": "19:41"
+  },
+  {
+   "outage_id": "OUT-1003",
+   "meter_id": "MTR-63601",
+   "node": "N13",
+   "site_type": "Homes",
+   "priority_rank": 5,
+   "customers": 676,
+   "repair_hours": 5,
+   "reported": "19:28"
+  },
+  {
+   "outage_id": "OUT-1004",
+   "meter_id": "MTR-52543",
+   "node": "N06",
+   "site_type": "Business",
+   "priority_rank": 4,
+   "customers": 14,
+   "repair_hours": 1,
+   "reported": "17:46"
+  },
+  {
+   "outage_id": "OUT-1005",
+   "meter_id": "MTR-41225",
+   "node": "N06",
+   "site_type": "School",
+   "priority_rank": 3,
+   "customers": 1,
+   "repair_hours": 4,
+   "reported": "20:47"
+  },
+  {
+   "outage_id": "OUT-1006",
+   "meter_id": "MTR-15897",
+   "node": "N04",
+   "site_type": "Business",
+   "priority_rank": 4,
+   "customers": 40,
+   "repair_hours": 4,
+   "reported": "20:17"
+  },
+  {
+   "outage_id": "OUT-1007",
+   "meter_id": "MTR-51746",
+   "node": "N14",
+   "site_type": "Homes",
+   "priority_rank": 5,
+   "customers": 287,
+   "repair_hours": 4,
+   "reported": "19:48"
+  },
+  {
+   "outage_id": "OUT-1008",
+   "meter_id": "MTR-51235",
+   "node": "N16",
+   "site_type": "Business",
+   "priority_rank": 4,
+   "customers": 43,
+   "repair_hours": 4,
+   "reported": "19:13"
+  },
+  {
+   "outage_id": "OUT-1009",
+   "meter_id": "MTR-16896",
+   "node": "N13",
+   "site_type": "Business",
+   "priority_rank": 4,
+   "customers": 8,
+   "repair_hours": 4,
+   "reported": "19:17"
+  },
+  {
+   "outage_id": "OUT-1010",
+   "meter_id": "MTR-26704",
+   "node": "N11",
+   "site_type": "Homes",
+   "priority_rank": 5,
+   "customers": 628,
+   "repair_hours": 4,
+   "reported": "18:57"
+  },
+  {
+   "outage_id": "OUT-1011",
+   "meter_id": "MTR-55819",
+   "node": "N17",
+   "site_type": "Homes",
+   "priority_rank": 5,
+   "customers": 113,
+   "repair_hours": 5,
+   "reported": "18:49"
+  },
+  {
+   "outage_id": "OUT-1012",
+   "meter_id": "MTR-69763",
+   "node": "N11",
+   "site_type": "Business",
+   "priority_rank": 4,
+   "customers": 53,
+   "repair_hours": 3,
+   "reported": "19:10"
+  },
+  {
+   "outage_id": "OUT-1013",
+   "meter_id": "MTR-71484",
+   "node": "N08",
+   "site_type": "Homes",
+   "priority_rank": 5,
+   "customers": 228,
+   "repair_hours": 5,
+   "reported": "17:24"
+  },
+  {
+   "outage_id": "OUT-1014",
+   "meter_id": "MTR-33153",
+   "node": "N16",
+   "site_type": "School",
+   "priority_rank": 3,
+   "customers": 2,
+   "repair_hours": 4,
+   "reported": "20:53"
+  },
+  {
+   "outage_id": "OUT-1015",
+   "meter_id": "MTR-70030",
+   "node": "N13",
+   "site_type": "Homes",
+   "priority_rank": 5,
+   "customers": 673,
+   "repair_hours": 3,
+   "reported": "16:06"
+  },
+  {
+   "outage_id": "OUT-1016",
+   "meter_id": "MTR-56981",
+   "node": "N07",
+   "site_type": "Business",
+   "priority_rank": 4,
+   "customers": 8,
+   "repair_hours": 1,
+   "reported": "20:58"
+  },
+  {
+   "outage_id": "OUT-1017",
+   "meter_id": "MTR-19786",
+   "node": "N02",
+   "site_type": "Business",
+   "priority_rank": 4,
+   "customers": 50,
+   "repair_hours": 5,
+   "reported": "18:13"
+  },
+  {
+   "outage_id": "OUT-1018",
+   "meter_id": "MTR-66901",
+   "node": "N13",
+   "site_type": "Business",
+   "priority_rank": 4,
+   "customers": 59,
+   "repair_hours": 5,
+   "reported": "16:40"
+  },
+  {
+   "outage_id": "OUT-1019",
+   "meter_id": "MTR-26127",
+   "node": "N15",
+   "site_type": "Homes",
+   "priority_rank": 5,
+   "customers": 798,
+   "repair_hours": 2,
+   "reported": "17:12"
+  },
+  {
+   "outage_id": "OUT-1020",
+   "meter_id": "MTR-61523",
+   "node": "N15",
+   "site_type": "School",
+   "priority_rank": 3,
+   "customers": 3,
+   "repair_hours": 4,
+   "reported": "20:44"
+  },
+  {
+   "outage_id": "OUT-1021",
+   "meter_id": "MTR-21983",
+   "node": "N01",
+   "site_type": "School",
+   "priority_rank": 3,
+   "customers": 4,
+   "repair_hours": 5,
+   "reported": "16:34"
+  },
+  {
+   "outage_id": "OUT-1022",
+   "meter_id": "MTR-56728",
+   "node": "N03",
+   "site_type": "Homes",
+   "priority_rank": 5,
+   "customers": 354,
+   "repair_hours": 1,
+   "reported": "18:16"
+  },
+  {
+   "outage_id": "OUT-1023",
+   "meter_id": "MTR-33870",
+   "node": "N09",
+   "site_type": "Business",
+   "priority_rank": 4,
+   "customers": 35,
+   "repair_hours": 4,
+   "reported": "16:07"
+  },
+  {
+   "outage_id": "OUT-1024",
+   "meter_id": "MTR-12424",
+   "node": "N15",
+   "site_type": "School",
+   "priority_rank": 3,
+   "customers": 1,
+   "repair_hours": 5,
+   "reported": "16:27"
+  },
+  {
+   "outage_id": "OUT-1025",
+   "meter_id": "MTR-23751",
+   "node": "N06",
+   "site_type": "Homes",
+   "priority_rank": 5,
+   "customers": 565,
+   "repair_hours": 5,
+   "reported": "20:33"
+  },
+  {
+   "outage_id": "OUT-1026",
+   "meter_id": "MTR-49127",
+   "node": "N08",
+   "site_type": "Business",
+   "priority_rank": 4,
+   "customers": 14,
+   "repair_hours": 2,
+   "reported": "17:42"
+  },
+  {
+   "outage_id": "OUT-1027",
+   "meter_id": "MTR-91922",
+   "node": "N17",
+   "site_type": "School",
+   "priority_rank": 3,
+   "customers": 1,
+   "repair_hours": 3,
+   "reported": "20:02"
+  },
+  {
+   "outage_id": "OUT-1028",
+   "meter_id": "MTR-72680",
+   "node": "N03",
+   "site_type": "Hospital",
+   "priority_rank": 1,
+   "customers": 3,
+   "repair_hours": 3,
+   "reported": "19:41"
+  },
+  {
+   "outage_id": "OUT-1029",
+   "meter_id": "MTR-56654",
+   "node": "N09",
+   "site_type": "Fire station",
+   "priority_rank": 2,
+   "customers": 1,
+   "repair_hours": 3,
+   "reported": "19:56"
+  },
+  {
+   "outage_id": "OUT-1030",
+   "meter_id": "MTR-23889",
+   "node": "N13",
+   "site_type": "Business",
+   "priority_rank": 4,
+   "customers": 39,
+   "repair_hours": 3,
+   "reported": "16:09"
+  },
+  {
+   "outage_id": "OUT-1031",
+   "meter_id": "MTR-41225",
+   "node": "N06",
+   "site_type": "School",
+   "priority_rank": 3,
+   "customers": 1,
+   "repair_hours": 4,
+   "reported": "20:47"
+  }
+ ],
+ "messages": [
+  {
+   "id": "MSG-200",
+   "text": "Power out on our whole street since 5 pm, the transformer made a loud pop."
+  },
+  {
+   "id": "MSG-201",
+   "text": "I can see sparking at the top of the pole near the school."
+  },
+  {
+   "id": "MSG-202",
+   "text": "Tree branch on the wires, line down across the sidewalk. Please hurry."
+  },
+  {
+   "id": "MSG-203",
+   "text": "Lights are flickering but not fully out."
+  },
+  {
+   "id": "MSG-204",
+   "text": "No power at the clinic, we are running on a generator."
+  },
+  {
+   "id": "MSG-205",
+   "text": "Smoke coming from the utility box on the corner, it smells like burning plastic."
+  },
+  {
+   "id": "MSG-206",
+   "text": "Still no power. Any update on when it will be back?"
+  },
+  {
+   "id": "MSG-207",
+   "text": "Line down in the backyard and the dog is inside. It is sparking a little."
+  },
+  {
+   "id": "MSG-208",
+   "text": "Outage at the restaurant, our fridges are getting warm."
+  },
+  {
+   "id": "MSG-209",
+   "text": "Heard a bang and then everything went dark on our block."
+  },
+  {
+   "id": "MSG-210",
+   "text": "There is a line down on Euclid, cars are driving around it."
+  },
+  {
+   "id": "MSG-211",
+   "text": "Power came back for a minute then went out again."
+  }
+ ],
+ "keywords": [
+  "line down",
+  "sparking",
+  "smoke",
+  "generator"
+ ]
+}
