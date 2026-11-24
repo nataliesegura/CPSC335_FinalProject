@@ -65,13 +65,45 @@ def merge_sort(items, key=lambda x: x):
     """Return a NEW list with the items sorted by key(item), smallest first.
 
     Must be STABLE: items with equal keys keep their original order.
-    Steps: 1) a list of 0 or 1 items is already sorted
+    Steps: 1) a list of 0 or 1 items is already sorted 
            2) split in half and merge_sort each half (recursion)
            3) merge the two sorted halves: repeatedly take the smaller front item
               (when the keys are equal, take from the LEFT half -> stable)
     Target: O(n log n).
     """
-    raise NotImplementedError("Part 2: merge_sort")
+    
+    # step 1:
+    if len(items) <= 1:
+        return list(items)
+
+    # step 2:
+    middle = len(items) // 2
+    leftHalf = merge_sort(items[:middle], key)
+    rightHalf = merge_sort(items[middle:], key)
+
+    # step 3:
+    mergedList = []
+    x = 0 # the left pointer
+    y = 0 # the right pointer
+
+    while x < len(leftHalf) and y < len(rightHalf):
+        if key(leftHalf[x]) <= key(rightHalf[y]): # guarantees when the keys are equal, its take from the left half
+            mergedList.append(leftHalf[x])
+            x += 1
+        else:
+            mergedList.append(rightHalf[y])
+            y += 1
+
+    # makes sure that if one of the halves is longer than the other, it will add the rest of the items to the merged list
+    while x < len(leftHalf):
+        mergedList.append(leftHalf[x])
+        x += 1
+
+    while y < len(rightHalf):
+        mergedList.append(rightHalf[y])
+        y += 1
+
+    return mergedList
 
 
 def lower_bound(sorted_items, target, key=lambda x: x):
