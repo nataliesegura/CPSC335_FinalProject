@@ -150,18 +150,64 @@ class MinHeap:
 
     def push(self, priority, item):
         """Add an item. Append at the end, then 'bubble up'. O(log n)."""
-        raise NotImplementedError("Part 3: MinHeap.push")
+        newEntry = (priority, self._count, item)
+        self._count += 1
+        self._a.append(newEntry) # appending at the end keeps tree shape complete without needing to shift any other items
+
+        # bubble up so that the new item isn't smaller than its parent
+        newEntryIndx = len(self._a) - 1
+        while newEntryIndx > 0: # more than 1 item in the heap
+            parent = (newEntryIndx - 1) // 2
+            if self._a[newEntryIndx][:2] < self._a[parent][:2]: # just comparing the priority and counter, not the item itself to avoid weird comparisons
+                self._a[newEntryIndx], self._a[parent] = self._a[parent], self._a[newEntryIndx] # if true, swap places
+                newEntryIndx = parent
+            else: # all positions are good
+                break
 
     def peek(self):
         """Return (priority, item) with the smallest priority without removing it.
         Raise IndexError if the heap is empty. O(1)."""
-        raise NotImplementedError("Part 3: MinHeap.peek")
+        if not self._a:
+            raise IndexError("heap is empty")
+        
+        priority, _count, item = self._a[0] # index 0 is the smallest priority
+        return (priority, item)
 
     def pop(self):
         """Remove and return (priority, item) with the smallest priority.
         Move the last entry to the top, then 'bubble down'.
         Raise IndexError if the heap is empty. O(log n)."""
-        raise NotImplementedError("Part 3: MinHeap.pop")
+        if not self._a:
+            raise IndexError("heap is empty")
+
+        poppedPriority, _poppedCount, poppedItem = self._a[0] # recording them to return later
+        last = self._a.pop()
+
+        if self._a:
+            self._a[0] = last # removes entry with smallest priority and replaces it with the last entry
+            indx = 0
+            heapSize = len(self._a)
+            
+            # now we need to bubble down so everything is correctly ordered again
+            while True:
+                leftChild = 2 * indx + 1
+                rightChild = 2 * indx + 2
+                smallest = indx # assumes the current index is the smallest
+                
+                # if _Child exists AND its priority is lower than parent:
+                if leftChild < heapSize and self._a[leftChild][:2] < self._a[smallest][:2]:
+                    smallest = leftChild
+                if rightChild < heapSize and self._a[rightChild][:2] < self._a[smallest][:2]:
+                    smallest = rightChild
+
+                # if lowest priority isn't the parent, swap
+                if smallest != indx:
+                    self._a[indx], self._a[smallest] = self._a[smallest], self._a[indx]
+                    indx = smallest
+                else: # order is correct
+                    break
+
+        return (poppedPriority, poppedItem)
 
 
 # =====================================================================
