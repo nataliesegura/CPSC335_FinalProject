@@ -45,7 +45,17 @@ def build_index(records, key):
     Example: records with ids A, B, A  ->  ({"A": ..., "B": ...}, ["A"])
     Target: expected O(n) time.
     """
-    raise NotImplementedError("Part 1: build_index")
+    index = {}
+    duplicates = []
+
+    for record in records:
+        k = record[key]
+        if k not in index:
+            index[k] = record
+        else:
+            duplicates.append(k)
+
+    return index, duplicates
 
 
 # =====================================================================
