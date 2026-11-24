@@ -115,7 +115,17 @@ def lower_bound(sorted_items, target, key=lambda x: x):
     Example: [1, 3, 3, 5, 9] with target 3 -> 1,  target 4 -> 3,  target 10 -> 5
     Target: O(log n).  Keep two pointers lo, hi and halve the range each step.
     """
-    raise NotImplementedError("Part 2: lower_bound")
+    lo = 0
+    hi = len(sorted_items) # the upper bound for the binary search
+
+    while lo < hi:
+        middle = (lo + hi) // 2
+        if key(sorted_items[middle]) < target: # if this is true then that means the first index is in the RIGHT half
+            lo = middle + 1 # so move the lower bound to the right of the middle index since we know that the first index is not in the left half
+        else:
+            hi = middle # because we know it wouldn't be in the right half
+
+    return lo
 
 
 # =====================================================================
