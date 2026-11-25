@@ -312,7 +312,51 @@ def kmp_search(text, pattern):
     2) scan the text once, never moving backwards in the text
     Target: O(n + m).  Do not use str.find, str.index, `in` on strings, or re.
     """
-    raise NotImplementedError("Part 7: kmp_search")
+    txtLen = len(text)
+    patLen = len(pattern)
+
+    if txtLen == 0 or patLen == 0 or patLen > txtLen:
+        return []
+    
+    # step 1: build the failure table
+    
+    fail = [0] * patLen
+    length = 0 # to track how many letters at the front match / indexing next front letter you'll check
+    indx = 1 # starts at 1 because the letter at [0] has no smaller prefix
+             # marks the end of the chunk you're looking at
+    
+    while indx < patLen:
+        if pattern[indx] == pattern[length]:
+            length += 1
+            fail[indx] = length
+            indx += 1
+        elif length > 0:
+            length = fail[length - 1]
+        else: # if length == 0
+            fail[indx] = 0
+            indx += 1
+            
+    # step 2: scan text (once, and never moving backwards in the text)
+    
+    # pointers:
+    t = 0 # for text
+    p = 0 # for pattern
+    
+    matches = []
+    
+    while t < txtLen:
+        if text[t] == pattern[p]:
+            t += 1
+            p += 1
+            if p == patLen: # found a pattern match
+                matches.append(t - patLen) # subtract so it gives the starting index of the match
+                p = fail[p - 1] # to catch overlapping matches
+        elif p > 0:
+            p = fail[p - 1] # mismatch so the failure table moves the pattern pointer back to the next best prefix
+        else: # if p == 0
+            t += 1 # advance to next letter in the text
+
+    return matches
 
 
 # =====================================================================
