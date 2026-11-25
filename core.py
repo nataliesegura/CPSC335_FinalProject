@@ -376,7 +376,28 @@ def tour_brute_force(start, stops, dist):
     (do not repeat start at the end). If stops is empty return ([start], 0).
     Target: O(n!) - only for about 9 stops or fewer.
     """
-    raise NotImplementedError("Part 8: tour_brute_force")
+    if not stops:
+        return [start], 0
+
+    bestCost = float("inf") # set to infinity so that any new cost will be less than it
+    bestOrder = []
+
+    for perm in permutations(stops): # goes through every possible rearrangement (perm) of the stops given
+        order = [start, *perm] # create the order of the tour starting with start and then adding the permutation of stops
+        cost = 0 # reset the cost for each permutation
+        
+        for indx in range(len(order) - 1): # loops through each stop in the current order
+            currentStop = order[indx]
+            nextStop = order[indx + 1]
+            cost += dist[currentStop][nextStop] # distance from currentStop to nextStop
+        
+        cost += dist[order[-1]][start] # finish with adding the cost of going from last stop back home
+
+        if cost < bestCost: # compare to current best cost, replace if better
+            bestCost = cost
+            bestOrder = order
+
+    return (bestOrder, bestCost)
 
 
 def tour_heuristic(start, stops, dist):
